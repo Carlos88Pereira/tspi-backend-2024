@@ -60,19 +60,19 @@ function contarVogais(frase) {
 // Exemplo de uso:
 var frase = "Esta é uma frase de exemplo";
 var numeroDeVogais = //contarVogais(frase);
-console.log("Número de vogais na frase:", numeroDeVogais);
+    console.log("Número de vogais na frase:", numeroDeVogais);
 
 function contarLetra(frase, letra) {
     // Convertendo a letra para minúscula para evitar distinção entre maiúsculas e minúsculas
     letra = letra.toLowerCase();
-    
+
     var contador = 0;
 
     // Itera sobre cada caractere da frase
     for (var i = 0; i < frase.length; i++) {
         // Convertendo o caractere atual para minúscula para evitar distinção entre maiúsculas e minúsculas
         var caractereAtual = frase[i].toLowerCase();
-        
+
         // Verifica se o caractere atual é igual à letra fornecida
         if (caractereAtual === letra) {
             contador++;
@@ -84,7 +84,7 @@ function contarLetra(frase, letra) {
 var frase = "Esta é uma frase de exemplo";
 var letra = "e";
 var numeroDeOcorrencias = //contarLetra(frase, letra);
-console.log("Número de vezes que a letra '" + letra + "' ocorre na frase:", numeroDeOcorrencias);
+    console.log("Número de vezes que a letra '" + letra + "' ocorre na frase:", numeroDeOcorrencias);
 
 function calcularTempoDeTrabalho(horaEntrada, horaSaida) {
     // Definindo os horários de abertura e fechamento da empresa
@@ -198,69 +198,71 @@ var lado = 5;
 
 function processStudent() {
     var alunos = [];
-    var aluno1 = {name: "carlos", number: 299, grade: 17};
-    var aluno2 = {name: "joao", number: 11, grade: 20};
-    var aluno3 = {name: "andre", number: 23, grade: 10};
-    var aluno4 = {name: "fras", number: 41, grade: 8};
-    var aluno5 = {name: "dsaasd", number: 2, grade: 5};
+    var aluno1 = { name: "carlos", number: 299, grade: 17 };
+    var aluno2 = { name: "joao", number: 11, grade: 20 };
+    var aluno3 = { name: "andre", number: 23, grade: 10 };
+    var aluno4 = { name: "fras", number: 41, grade: 8 };
+    var aluno5 = { name: "dsaasd", number: 2, grade: 5 };
     alunos.push(aluno1, aluno2, aluno3, aluno4, aluno5);
     return alunos;
 }
 var alunos = processStudent();
 // Lista - O programa imprime todas as notas. 
-for (var i = 0; i < alunos.length; i++){
+for (var i = 0; i < alunos.length; i++) {
     console.log("O aluno " + alunos[i].name + " com o numero " + alunos[i].number + " tem a média de: " + alunos[i].grade);
 }
 //c. Melhor nota – O programa imprime o número do melhor aluno e a respetiva nota. 
-    var notaMaisAlta = alunos[0].grade;
-    var AlunoMaisAlta = alunos[0].name;
-    for (var i = 0; i< alunos.length; i++){
-        if (alunos[i].grade > notaMaisAlta){
-            notaMaisAlta = alunos[i].grade;
-            AlunoMaisAlta = alunos[i].name;
-        } 
+var notaMaisAlta = alunos[0].grade;
+var AlunoMaisAlta = alunos[0].name;
+for (var i = 0; i < alunos.length; i++) {
+    if (alunos[i].grade > notaMaisAlta) {
+        notaMaisAlta = alunos[i].grade;
+        AlunoMaisAlta = alunos[i].name;
     }
+}
 console.log("A nota mais dalta é " + notaMaisAlta + ", e pertence a " + AlunoMaisAlta);
 //d. Pior nota – O programa imprime o número do pior aluno e a respetiva nota. 
-    var notaBaixa = alunos[0].grade
-    var alunoMaisBaixo = alunos[0].name
-    for (var i = 0; i < alunos.length; i++){
-        if (alunos[i].grade < notaBaixa){
-            notaBaixa = alunos[i].grade
-            alunoMaisBaixo = alunos[i].name
-        }     
+var notaBaixa = alunos[0].grade
+var alunoMaisBaixo = alunos[0].name
+for (var i = 0; i < alunos.length; i++) {
+    if (alunos[i].grade < notaBaixa) {
+        notaBaixa = alunos[i].grade
+        alunoMaisBaixo = alunos[i].name
     }
+}
 console.log("A nota mais baixa é " + notaBaixa + ", e pertence a " + alunoMaisBaixo);
 //e. Nota média – O programa imprime o número do aluno que tiver a nota mais próxima da média e a respectiva nota
 function notaMedia(alunos) {
-    var soma = 0; 
+    var soma = 0;
     for (var i = 0; i < alunos.length; i++) {
         soma += alunos[i].grade;
     }
     var media = soma / alunos.length;
     return media;
 }
-var alunos = processStudent(); 
+var alunos = processStudent();
 var total = notaMedia(alunos);
-console.log("A nota média " + total); 
+console.log("A nota média " + total);
 
 function negativas(alunos) {
     for (var i = 0; i < alunos.length; i++) {
         if (alunos[i].grade < 10) {
-            var nome = alunos[i].name; 
+            var nome = alunos[i].name;
             var nota = alunos[i].grade;
-            console.log("O aluno " + nome + " teve negativa de " + nota); 
-        } 
+            console.log("O aluno " + nome + " teve negativa de " + nota);
+        }
     }
 }
 negativas(alunos);
 
-function positivas(alunos){
-    for (var i = 0; i <alunos.length; i++){
+function positivas(alunos) {
+    for (var i = 0; i < alunos.length; i++) {
         if (alunos[i].grade > 10) {
-            var nome = alunos[i].name; 
+            var nome = alunos[i].name;
             var nota = alunos[i].grade;
-            console.log("O aluno " + nome + " teve positiva de " + nota); 
+            console.log("O aluno " + nome + " teve positiva de " + nota);
         }
     }
 }
+
+
