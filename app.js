@@ -257,7 +257,7 @@ negativas(alunos);
 
 function positivas(alunos) {
     for (var i = 0; i < alunos.length; i++) {
-        if (alunos[i].grade > 10) {
+        if (alunos[i].grade >= 10) {
             var nome = alunos[i].name;
             var nota = alunos[i].grade;
             console.log("O aluno " + nome + " teve positiva de " + nota);
