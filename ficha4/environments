@@ -1,0 +1,28 @@
+module.exports = {
+  env: {
+    DEV1: {
+      host: "DEV688",
+      connectString: "192.169.0.1@root",
+      password: "dhkjdhsak",
+      region: "US",
+    },
+    TEST: {
+      host: "DEV688",
+      connectString: "192.169.0.1@root",
+      password: "dhkjdhsak",
+      region: "US",
+    },
+    QA: {
+      host: "DEV688",
+      connectString: "192.169.0.1@root",
+      password: "dhkjdhsak",
+      region: "US",
+    },
+    PROD: {
+      host: "DEV688",
+      connectString: "192.169.0.1@root",
+      password: "dhkjdhsak",
+      region: "US",
+    },
+  },
+};
