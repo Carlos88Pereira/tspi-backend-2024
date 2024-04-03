@@ -1,0 +1,1 @@
+/HTMLfile,function toLocaleTimeString() { [native code] }GET
