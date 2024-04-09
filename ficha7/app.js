@@ -111,3 +111,15 @@ app.put('/people/:Id', (req, res) => {
     }
   });
 });
+
+app.put('/people/:Id', (req, res) => {
+  var details = req.body;
+  var id = req.params.Id;
+  var updateStatement = 'UPDATE ficha7.people SET firstname = ?, lastname = ?, age = ?, profession = ?';
+  var values = [details.firstName, details.lastName, details.age, details.profession, id];
+  connection.query(updateStatement, values, (error, results, fields)); 
+    if (error != undefined) 
+      res.status(500).send(JSON.stringify(error));
+    else
+      res.send("UPDATED ROWS");
+    });
